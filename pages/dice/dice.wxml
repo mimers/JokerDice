@@ -1,0 +1,4 @@
+
+<view class="container dice-list">
+  <span animation="{{diceAnimation}}" class="dice dice-{{dice}}" title="Dice 1"></span>
+</view>
