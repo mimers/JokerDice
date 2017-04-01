@@ -1,10 +1,9 @@
 
 <view class="container">
+  <textarea value="{{value}}" placeholder="请输入要翻译的内容" bindinput="originText" />
+  <button bindtap="translateIt">翻译</button>
+  <textarea placeholder="翻译的中文结果" value="{{translatedText}}" />
   <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <button bindtap="startDice" class="start">立即开始</button>
+    <text class="userinfo-nickname">告诉我你想翻译什么吧，{{ userInfo.nickName }}</text>
   </view>
 </view>

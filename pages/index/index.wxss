@@ -5,17 +5,27 @@
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
 .userinfo-nickname {
   color: #aaa;
 }
 
-.start {
-  margin-top: 200rpx;
+button {
+  font-size: 28rpx;
+  margin-right: 30rpx;
+}
+
+button:active {
+  box-shadow: 0px 0px 20rpx 0px lightslategray;
+  transform: translate(-1rpx, -1rpx);
+}
+
+textarea {
+  border: 1px dashed lightsteelblue;
+  border-radius: 9rpx;
+  box-shadow: 1rpx 1rpx 10rpx 0rpx lightgray inset, 1rpx 1rpx 20rpx 0rpx lightslategray;
+  margin: 20rpx 0rpx;
+  width: 90%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  height: 260rpx;
 }
