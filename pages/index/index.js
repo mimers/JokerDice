@@ -35,7 +35,7 @@ Page({
         // header: {}, // 设置请求的 header
         success: function (res) {
           this.setData({
-            translatedText: res.data.trans_result.length > 1 ? res.data.trans_result.length.reduce(function (a, b) {
+            translatedText: res.data.trans_result.length > 1 ? res.data.trans_result.reduce(function (a, b) {
               return a.dst + '\n' + b.dst;
             }) : res.data.trans_result[0].dst
           })
