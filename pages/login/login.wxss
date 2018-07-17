@@ -1,0 +1,27 @@
+/* pages/login/login.wxss */
+radio-group {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+}
+
+.avatar{
+  width: 100px;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pages > div {
+  text-align: center;
+  border: solid 3px sandybrown;
+  box-shadow: 1px 1px royalblue; 
+}
+
+image {
+  width: 150px;
+  height: 150px;
+  display: block;
+}

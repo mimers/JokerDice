@@ -3,6 +3,7 @@
   min-height: 600rpx;
   width: 600rpx;
   background-size: 100%;
+  margin-top: 100px;
   background-repeat: no-repeat;
   transform: scale(0.1, 0.1), rotate(0deg);
   opacity: 0;

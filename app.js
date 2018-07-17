@@ -1,8 +1,10 @@
 //app.js
-var gio = require('vds-mina.js')
-gio.projectId = "85864a8537ab43a2a066feb1855c1783"
-gio.appId = "wxe3947a636f66ee7a"
-gio.debug = true
+// var gio = require('vds-mina.js')
+// gio.projectId = "85864a8537ab43a2a066feb1855c1783"
+// gio.appId = "wxe3947a636f66ee7a"
+// gio.debug = true
+var gio = require("utils/gio-minp.js");// version 是你的小程序的版本号 
+gio('init', '85864a8537ab43a2a066feb1855c1783', 'wx3487bb98a8a5510e', { version: '1.0' });
 App({
   getUserInfo:function(cb){
     var that = this
@@ -15,7 +17,7 @@ App({
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
-              gio.setCS1("user", res.userInfo.nickName)
+              gio('setVisitor', res.userInfo)
               typeof cb == "function" && cb(that.globalData.userInfo)
             }
           })

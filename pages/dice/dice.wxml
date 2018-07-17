@@ -1,4 +1,5 @@
-
-<view class="container dice-list">
-  <span animation="{{diceAnimation}}" class="dice dice-{{dice}}" title="Dice 1"></span>
-</view>
+<navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
+  <view class="container dice-list">
+    <span animation="{{diceAnimation}}" class="dice dice-{{dice}}" title="Dice 1"></span>
+  </view>
+</navigator>
