@@ -1,9 +1,24 @@
-
+<form bindsubmit="formSubmit">
 <view class="container">
-  <textarea value="{{value}}" placeholder="请输入要翻译的内容" bindinput="originText" />
-  <button class="translate-button" bindtap="translateIt">翻译</button>
-  <textarea placeholder="翻译的中文结果" value="{{translatedText}}" />
+  <textarea name='original' value="{{value}}" placeholder="请输入要翻译的内容" bindinput="originText" bindblur="confirm" data-growing-track/>
+  <button formType="submit" class="translate-button" bindtap="translateIt">翻译</button>
+  <textarea name='tranlated' placeholder="翻译的中文结果" value="{{translatedText}}" data-growing-track/>
   <view class="userinfo">
     <text class="userinfo-nickname">告诉我你想翻译什么吧，{{ userInfo.nickName }}</text>
   </view>
 </view>
+</form>
+
+<div class='pages'>
+  <div>
+    <navigator url="/pages/dice/dice?pageTitle=我的骰子" hover-class="navigator-hover">
+      <text>去掷骰子</text>
+    </navigator>
+  </div>
+  <div>
+    <navigator url="/pages/counter/counter?pageTitle=倒计时" hover-class="navigator-hover">
+      倒计时</navigator>
+  </div>
+</div>
+
+<ad unit-id="adunit-a168fba55a88fda1"></ad>

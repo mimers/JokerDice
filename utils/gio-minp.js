@@ -178,7 +178,7 @@ class Observer {
       let i = new VueProxy(this.growingio.vueRootVMs[this.currentPage.path]).getHandle(t);
       i && (e = i)
     }
-    this.growingio.debug && console.log("Click on ", e, Date.now()), "tap" === t.type || "longpress" === t.type ? this.sendClick(t, e) : -1 !== ["change", "confirm", "blur"].indexOf(t.type) ? this.sendChange(t, e) : "getuserinfo" === t.type && (this.sendClick(t, e), t.detail && t.detail.userInfo && this.setVisitor(t.detail.userInfo))
+    this.growingio.debug && console.log("Click on ", e, Date.now()), "tap" === t.type || "longpress" === t.type ? this.sendClick(t, e) : -1 !== ["change", "submit", "blur"].indexOf(t.type) ? this.sendChange(t, e) : "getuserinfo" === t.type && (this.sendClick(t, e), t.detail && t.detail.userInfo && this.setVisitor(t.detail.userInfo))
   }
   track(t, e) {
     if (null !== t && void 0 !== t && 0 !== t.length) {
@@ -330,7 +330,7 @@ class Observer {
       n = {
         x: `${s.id}#${e}`
       };
-    if (-1 !== ["blur", "change", "confirm"].indexOf(t.type) && s.dataset.growingTrack) {
+    if (-1 !== ["blur", "change", "submit"].indexOf(t.type) && s.dataset.growingTrack) {
       if (!t.detail.value || 0 === t.detail.value.length) return;
       "string" == typeof t.detail.value ? n.v = t.detail.value : "[object Array]" === Object.prototype.toString.call(t.detail.value) && (n.v = t.detail.value.join(","))
     }

@@ -1,27 +1,38 @@
-/* pages/login/login.wxss */
-radio-group {
-  display: flex;
-  justify-items: center;
-  align-content: center;
-}
 
-.avatar{
-  width: 100px;
+button{
+  width: 200px;
+  background-color: sandybrown;
+  /* color: rgb(21, 130, 224); */
+  font-weight: bold;
 }
 
 .pages {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+.pages > div > navigator {
+  width: initial;
+}
 .pages > div {
+  width: 150px;
+  background: transparent;
+  margin-top: 30px;
   text-align: center;
   border: solid 3px sandybrown;
-  box-shadow: 1px 1px royalblue; 
+  box-shadow: 0px 4px 20px 0px rgba(65, 105, 225, 0.705), 0 0 4px 0 gray; 
+  flex-grow: 0;
+  flex-basis: 0;
+  flex-shrink: 1;
 }
-
 image {
   width: 150px;
   height: 150px;
   display: block;
+}
+navigator{
+  width: 150px;
 }

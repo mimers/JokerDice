@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 var MD5 = require('../../utils/md5')
+var gio = require('../../utils/gio-minp.js');
 var app = getApp()
 Page({
   data: {
@@ -10,6 +11,12 @@ Page({
   },
   originText: function (e) {
     this.value = e.detail.value;
+  },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  confirm: function (e) {
+    console.log('form发生了confirm事件，携带数据为：', e.detail.value)
   },
   translateIt: function () {
     if (this.value) {
@@ -52,16 +59,18 @@ Page({
 
   onShareAppMessage: function () {
     return {
-      title: '邦邦帮你翻译！',
+      title: '我的翻译！',
       path: '/pages/index/index?origin=' + this.value,
       success: function (res) {
         // 分享成功
+        gio('track', 'shareSuccess', { 'sharedPage': '我的翻译！' });
       },
       fail: function (res) {
         // 分享失败
       }
-    }
+    };
   },
+
   onLoad: function (params) {
     console.log('onLoad')
     var that = this;

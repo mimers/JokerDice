@@ -1,19 +1,18 @@
-<open-data class='avatar' type="userAvatarUrl"></open-data>
 <div>
-  <button open-type='getUserInfo'>授权公开信息</button>
-  <button open-type='share'>分享给喜欢的人</button>
+  <button open-type='getUserInfo'>我是谁？我在哪？</button>
   <div class='pages'>
     <div>
-      <navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
-        <image src='translator.png'></image>去翻译</navigator>
+      <navigator url="/pages/dice/dice?pageTitle=我的骰子" hover-class="navigator-hover">
+        <image src='../dice.png'></image>去掷骰子</navigator>
     </div>
     <div>
-      <navigator url="/pages/dice/dice?pageTitle=我的骰子" hover-class="navigator-hover">
-        <image src='dice.png'></image>去掷骰子</navigator>
+      <navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
+        <image src='../translator.png'></image>去翻译</navigator>
+    </div>
+    
+    <div>
+      <navigator url="/pages/counter/counter?pageTitle=我的骰子" hover-class="navigator-hover">
+        <image src='../sand.png'></image>倒计时</navigator>
     </div>
   </div>
 </div>
-<radio-group bindchange='alike' data-growing-track>
-  <radio value='like'>喜欢</radio>
-  <radio value='dislike'>不喜欢</radio>
-</radio-group>

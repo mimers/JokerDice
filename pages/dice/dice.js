@@ -1,10 +1,29 @@
 //logs.js
+var gio = require('../../utils/gio-minp.js');
 var util = require('../../utils/util.js')
 Page({
   data: {
     dice: 1,
     diceAnimation: {}
   },
+  onShareAppMessage: function () {
+    return {
+      title: '我的骰子！',
+      path: '/pages/dice/dice',
+      success: function (res) {
+        // 分享成功
+        gio('track', 'shareSuccess', { 'sharedPage': this.title })
+      },
+      fail: function (res) {
+        // 分享失败
+        gio('track', 'shareFail')
+      }
+    }
+  },
+  rethrow: function() {
+      this.onLoad();
+  },
+
   onLoad: function () {
     this.diceRollTimer = setTimeout(this.rollDice, this.rollDelay);
     this.diceRollCount = 10;

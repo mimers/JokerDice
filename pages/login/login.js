@@ -1,4 +1,5 @@
 // pages/login/login.js
+var gio = require('../../utils/gio-minp.js');
 Page({
 
   /**
@@ -6,6 +7,20 @@ Page({
    */
   data: {
   
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '首页',
+      path: '/pages/login/login',
+      success: function (res) {
+        // 分享成功
+        gio('track', 'shareSuccess', { 'sharedPage': this.title })//为啥页面title没拿到？
+      },
+      fail: function (res) {
+        // 分享失败
+        gio('track', 'shareFail')
+      }
+    }
   },
 
   /**
@@ -60,11 +75,5 @@ Page({
   onReachBottom: function () {
   
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   
-  }
 })

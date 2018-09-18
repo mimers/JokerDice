@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 我在哪，我是谁 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='info'>
+    <text class='prepare'>准备开始！</text>
+    <view> 倒计时 <b>{{ random }}</b> 秒！</view>
+    <text>  最接近的玩家获胜！</text>
+    <text class='delta'>{{ delta }}</text>
+    
+  </view>
+  <view >
+    <button class="usermotto" bindtap='goCounter' class="user-motto">{{motto}}</button>
+  </view>
+</view>
+
+<div class='pages'>
+  <div>
+    <navigator url="/pages/dice/dice?pageTitle=我的骰子" hover-class="navigator-hover">
+      <text>去掷骰子</text>
+    </navigator>
+  </div>
+  <div>
+    <navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
+      去翻译</navigator>
+  </div>
+
+</div>
+<ad unit-id="adunit-78e43b739eaf07cd"></ad>

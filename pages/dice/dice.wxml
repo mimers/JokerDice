@@ -1,5 +1,16 @@
-<navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
-  <view class="container dice-list">
-    <span animation="{{diceAnimation}}" class="dice dice-{{dice}}" title="Dice 1"></span>
-  </view>
-</navigator>
+
+<ad unit-id="adunit-e47343399e42b312"></ad><view bindtap='rethrow' class="container dice-list">
+  <span animation="{{diceAnimation}}" class="dice dice-{{dice}}" title="Dice 1"></span>
+</view>
+
+<div class='pages'>
+  <div>
+    <navigator url="/pages/index/index?pageTitle=我的翻译" hover-class="navigator-hover">
+      去翻译</navigator>
+  </div>
+
+  <div>
+    <navigator url="/pages/counter/counter?pageTitle=倒计时" hover-class="navigator-hover">
+      倒计时</navigator>
+  </div>
+</div>

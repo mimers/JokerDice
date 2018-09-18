@@ -2,12 +2,14 @@
   "pages": [
     "pages/login/login",
     "pages/dice/dice",
+    "pages/counter/counter",
     "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "邦邦翻译",
+    "navigationBarTitleText": "骰子翻译",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "debug" : true
 }
